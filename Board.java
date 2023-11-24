@@ -12,7 +12,7 @@ public class Board {
 
     private void initializeGameBoard() {
 
-        for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 3; i++) {
 
             for (int j = 0; j < 3; j++) {
 
@@ -28,7 +28,7 @@ public class Board {
 
         System.out.println("-------------");
 
-        for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 3; i++) {
 
             System.out.print("| ");
 
@@ -107,7 +107,7 @@ public class Board {
 
         // Check if the gameBoard is full (no empty spaces)
 
-        for (int row = 0; row < 3; row++) {
+            for (int row = 0; row < 3; row++) {
 
             for (int col = 0; col < 3; col++) {
 
