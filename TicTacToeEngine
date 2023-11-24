@@ -4,7 +4,7 @@
 
 public class TicTacToeEngine {
 
-    public static void TicTacToeEngine(String[] args) {
+    public static void main(String[] args) {
 
         TicTacToeGame tictactoe = new TicTacToeGame();
 
