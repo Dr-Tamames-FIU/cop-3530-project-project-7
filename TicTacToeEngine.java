@@ -8,8 +8,12 @@ public class TicTacToeEngine {
 
         TicTacToeGame tictactoe = new TicTacToeGame();
 
-        tictactoe.startGame();
+        tictactoe.playGame();
 
     }
 
 }
+
+
+
+
