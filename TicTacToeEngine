@@ -1,1 +1,15 @@
 
+
+
+
+public class TicTacToeEngine {
+
+    public static void TicTacToeEngine(String[] args) {
+
+        TicTacToeGame tictactoe = new TicTacToeGame();
+
+        tictactoe.startGame();
+
+    }
+
+}
