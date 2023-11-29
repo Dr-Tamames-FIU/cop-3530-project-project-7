@@ -3,6 +3,7 @@
 Project 7: Alex Pepitone, Udeme Ekpo, and Gerald Gelats
 
 Tic-Tac-Toe Game
+
 This repository contains a console-based Tic-Tac-Toe game implemented in Java.
 
 
