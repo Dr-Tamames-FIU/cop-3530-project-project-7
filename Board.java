@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 
+// Represents the Tic-Tac-Toe game board
 public class Board {
 
-    private char[][] gameBoard;
+    private char[][] gameBoard;// 2D array to store the game board
 
-    private ArrayList<ArrayList<Integer>> wininRows;
+    private ArrayList<ArrayList<Integer>> wininRows; // Winning positions in rows
 
-    private ArrayList<ArrayList<Integer>> wininColumns;
+    private ArrayList<ArrayList<Integer>> wininColumns; // Winning positions in columns
 
-    private ArrayList<ArrayList<Integer>> wininDiagonals;
+    private ArrayList<ArrayList<Integer>> wininDiagonals; // Winning positions in diagonals
 
-
+    // Constructor initializes the game board and winning positions
     public Board() {
 
         gameBoard = new char[3][3];
@@ -23,6 +24,7 @@ public class Board {
 
     }
 
+    // Helper method to initialize the game board with empty spaces
     private void initializeGameBoard() {
 
             for (int x = 0; x < 3; x++) {
@@ -37,6 +39,7 @@ public class Board {
 
     }
 
+    // Helper method to initialize winning positions in rows, columns, and diagonals
     private void initializeWinnerCheck() {
 
         wininRows = new ArrayList<>();
@@ -94,7 +97,7 @@ public class Board {
     }
 
 
-
+    // Displays the current state of the game board
     public void displayGameBoard() {
 
         System.out.println("-------------");
@@ -115,18 +118,21 @@ public class Board {
 
     }
 
+    // Checks if a move is valid at the specified row and column
     public boolean isMoveValid(int row, int col) {
         
         return row >= 0 && row < 3 && col >= 0 && col < 3 && gameBoard[row][col] == ' ';
 
     }
 
+    // Makes a move by updating the game board with the player's symbol
     public void makeMove(int row, int col, char playerSymbol) {
 
         gameBoard[row][col] = playerSymbol;
 
     }
 
+    // Checks if the current state of the board represents a win
     public boolean checkForWin() {
 
         return checkForHelp(wininRows) || checkForHelp(wininColumns) || checkForWinDiagonals();
@@ -134,7 +140,7 @@ public class Board {
     }
 
 
-
+    // Helper method to check for a win based on given positions
     private boolean checkForHelp(ArrayList<ArrayList<Integer>> positions) {
 
         for (ArrayList<Integer> pos : positions) {
@@ -160,14 +166,14 @@ public class Board {
     }
 
     
-
+    // Helper method to check for a win in diagonals
     private boolean checkForWinDiagonals() {
 
         return checkForHelp(wininDiagonals);
 
     }
 
-
+    // Checks if the game has ended in a draw
     public boolean checkForDraw() {
 
         // Check if the gameBoard is full (no empty spaces)

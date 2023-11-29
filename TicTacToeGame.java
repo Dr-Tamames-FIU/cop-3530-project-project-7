@@ -1,28 +1,40 @@
 import java.util.Scanner;
 
+// Implements the game logic for Tic-Tac-Toe
+public class TicTacToeGame implements GameLogic {
 
+    private Board board; // Game board
 
-public class TicTacToeGame {
+    private Player player1; // Player 1
 
-    private Board board;
+    private Player player2; // Player 2
 
-    private Player currentPlayer;
+    private Player currentPlayer;  // Current player
 
-    private Result result;
+    private Result result;  // Game result
 
-    public TicTacToeGame() {
+    private Scanner scanner; // Scanner for input
+
+    // Constructor initializes the game with player names
+    public TicTacToeGame(String player1Name, String player2Name) {
 
         board = new Board();
 
-        currentPlayer = new Player('X');
+        player1 = new Player(player1Name, 'X');
+
+        player2 = new Player(player2Name, 'O');
+
+        currentPlayer = player1;
 
         result = new Result("");
 
+        scanner = new Scanner(System.in);
+
     }
 
+    // Implements the main game loop and controls the game flow
     public void playGame() {
 
-        // Main game loop
         while (true) {
 
             board.displayGameBoard();
@@ -33,14 +45,17 @@ public class TicTacToeGame {
 
                 board.displayGameBoard();
 
-                result = new Result("Player " + currentPlayer.getSymbol() + " wins!");
+                result = new Result(currentPlayer.getName() + " wins!");
 
                 result.displayResult();
 
                 break;
 
-            } else if (board.checkForDraw()) {
+            } 
 
+            else if (board.checkForDraw()) 
+
+            {
                 board.displayGameBoard();
 
                 result = new Result("It's a draw!");
@@ -52,52 +67,60 @@ public class TicTacToeGame {
             }
 
             switchPlayers();
+        }
+
+        if (askForReplay()) {
+
+            board = new Board();
+
+            playGame();
 
         }
 
+        scanner.close();  // Close the Scanner when it's no longer needed
     }
 
+    // Handles the process of making a move by a player
     private void makeMove() {
 
-        Scanner scanner = new Scanner(System.in);
+        int[] move = GameInputHandler.getPlayerMove(currentPlayer);
 
-        int inputRow, inputCol;
+        int inputRow = move[0];
 
-        while (true) {
+        int inputCol = move[1];
 
-            System.out.print("Player " + currentPlayer.getSymbol() + ", enter your move (row and column): ");
+        if (board.isMoveValid(inputRow, inputCol)) {
 
-            inputRow = scanner.nextInt();
+            board.makeMove(inputRow, inputCol, currentPlayer.getSymbol());
 
-            inputCol = scanner.nextInt();
+        } 
+        
+        else
+        
+        {
+            System.out.println("Invalid move. Please try again.");
 
-
-            inputRow = inputRow - 1;
-            
-            inputCol = inputCol - 1;
-
-            if (board.isMoveValid(inputRow, inputCol)) {
-
-                board.makeMove(inputRow, inputCol, currentPlayer.getSymbol());
-
-                break;
-
-            } else {
-
-                System.out.println("Invalid move. Please try again.");
-
-            }
-
+            makeMove(); // Recursive call to try again
         }
-
-
-
     }
 
+    // Switches the current player between player1 and player2
     private void switchPlayers() {
 
-        currentPlayer.switchSymbol();
+        currentPlayer = (currentPlayer == player1) ? player2 : player1;
 
     }
 
+    // Asks the players if they want to replay the game
+    private boolean askForReplay() {
+
+        System.out.print("Do you want to play again? (yes/no): ");
+
+        String response = scanner.next().toLowerCase();
+
+        return response.equals("yes");
+        
+    }
+    
+    
 }
