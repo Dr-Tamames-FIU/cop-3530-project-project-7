@@ -12,7 +12,7 @@ Notes:
     
    This program is designed to run in a console or terminal environment.
     
-    If you encounter any issues, please check your Java installation and ensure that the terminal supports user input.
+   If you encounter any issues, please check your Java installation and ensure that the terminal supports user input.
 
 
 How to Run the Program:
