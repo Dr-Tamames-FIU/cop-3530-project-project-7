@@ -5,9 +5,11 @@ public class TicTacToeGame implements GameLogic {
 
     private Board board; // Game board
 
-    private Player player1; // Player 1
+    private PlayerMap PlayerMap; //Map that stores player information
 
-    private Player player2; // Player 2
+    private String player1Name; //Player1's Name
+
+    private String player2Name; //Player2's Name
 
     private Player currentPlayer;  // Current player
 
@@ -18,13 +20,19 @@ public class TicTacToeGame implements GameLogic {
     // Constructor initializes the game with player names
     public TicTacToeGame(String player1Name, String player2Name) {
 
+        this.player1Name = player1Name;
+
+        this.player2Name = player2Name;
+
         board = new Board();
 
-        player1 = new Player(player1Name, 'X');
+        PlayerMap = new PlayerMap();
 
-        player2 = new Player(player2Name, 'O');
+        PlayerMap.addPlayerToGame(player1Name, 'X');
 
-        currentPlayer = player1;
+        PlayerMap.addPlayerToGame(player2Name, 'O');
+
+        currentPlayer = PlayerMap.getPlayerFromGame(player1Name);
 
         result = new Result("");
 
@@ -107,7 +115,8 @@ public class TicTacToeGame implements GameLogic {
     // Switches the current player between player1 and player2
     private void switchPlayers() {
 
-        currentPlayer = (currentPlayer == player1) ? player2 : player1;
+        currentPlayer = (currentPlayer == PlayerMap.getPlayerFromGame(player1Name)) ? PlayerMap.getPlayerFromGame(player2Name) : PlayerMap.getPlayerFromGame(player1Name);
+
 
     }
 
