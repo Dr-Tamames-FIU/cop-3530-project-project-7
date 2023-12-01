@@ -5,7 +5,7 @@ public class TicTacToeGame implements GameLogic {
 
     private Board board; // Game board
 
-    private PlayerMap PlayerMap; //Map that stores player information
+    private PlayerMap PlayerMap; //Map player names to their corresponding symbols
 
     private String player1Name; //Player1's Name
 
