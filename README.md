@@ -72,6 +72,8 @@ Gerald Gelats Detailed Contributions:
 
 -Added simple and brief comments to code.
 
+----------------------------------------------------------------------------------------
+
 Udeme Ekpo Handled the result method
 
 Udeme Ekpo Detailed Contributions:
