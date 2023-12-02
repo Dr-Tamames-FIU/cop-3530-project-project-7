@@ -5,7 +5,7 @@ Project 7: Alex Pepitone, Udeme Ekpo, and Gerald Gelats
 Data Structures used are: 2d arrays, array-list and HashMap
 
 
-
+------------------------------------------------------------------------------------------------------------------------------
 Contributions: 
 
 Alex Pepitone handled the coding for TicTacToeGame, TicTacToeEngine, PlayerMap, Player, and Board methods
@@ -52,7 +52,9 @@ Alex Pepitone Detailed Contribution:
 
 -Implemented a constructor to initialize the player mapping.
 
+-Added methods to insert a new player into the game and retrieve a player object based on the name.
 
+----------------------------------------------------------------------------------------
 
 Gerald Gelats: Handled coding for GameLogic and GameInputHandler methods
 
