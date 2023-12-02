@@ -62,7 +62,7 @@ Alex Pepitone Detailed Contribution:
 
 -Added methods to insert a new player into the game and retrieve a player object based on the name.
 
----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
 
 Gerald Gelats: Handled coding for GameLogic and GameInputHandler
 
