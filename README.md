@@ -2,6 +2,56 @@
 
 Project 7: Alex Pepitone, Udeme Ekpo, and Gerald Gelats
 
+Data Structures used are: 2d arrays, array-list and HashMap
+
+
+
+Contributions: 
+
+Alex Pepitone handled the coding for TicTacToeGame, TicTacToeEngine, PlayerMap, Player, Result and Board methods
+
+Alex Pepitone Detailed Contribution:
+
+-Implemented a class that utilizes a HashMap to map player names to their corresponding Player objects.
+-Created a HashMap named gamePlayers to store player information.
+-Implemented a method addPlayerToGame to insert a new player into the game with the specified name and symbol.
+-Implemented a method getPlayerFromGame to retrieve a Player object based on the player's name.
+-Utilized ArrayLists to represent winning positions in rows, columns, and diagonals.
+-Initialized wininRows, wininColumns, and wininDiagonals as ArrayLists of ArrayLists to store winning positions.
+-Implemented the initializeWinnerCheck method to set up winning positions using nested loops and ArrayLists.
+-Created a class to represent the Tic-Tac-Toe game board.
+-Implemented methods to initialize the game board and winning positions.
+-Developed methods for displaying the game board, checking move validity, making a move, checking for a win, and checking for a draw.
+-Developed the main game logic for Tic-Tac-Toe.
+-Implemented a constructor to initialize the game with player names and symbols.
+-Created the main game loop to control the flow of the game.
+-Implemented methods to handle player moves, switch players, and ask for a game replay.
+-Designed the main class to run the Tic-Tac-Toe game.
+-Implemented the main method to initialize player names, create a TicTacToeGame instance, and start the game.
+-Established a class to represent the result of a Tic-Tac-Toe game.
+-Implemented a constructor to initialize the result message.
+-Created a method to display the game result.
+-Created a class to represent a player in the Tic-Tac-Toe game.
+-Implemented a constructor to initialize a player with a given name and symbol.
+-Implemented methods to retrieve the player's name and symbol.
+-Developed a class to map player names to their corresponding symbols.
+-Implemented a constructor to initialize the player mapping.
+-Added methods to insert a new player into the game and retrieve a player object based on the name.
+
+Gerald Gelats: Handled coding for GameLogic and GameInputHandler
+
+Gerald Gelats Detailed Contributions:
+
+-Added ability to input Player 1 and 2 names.
+-Added replay button.
+-Added Interface because it allows the creation of different games in the future that also implement the 'GameLogic' interface.
+-Added Error Handling when input is wrong.
+-Added detailed README file.
+-Added simple and brief comments to code.
+
+
+
+
 Tic-Tac-Toe Game
 
 This repository contains a console-based Tic-Tac-Toe game implemented in Java.

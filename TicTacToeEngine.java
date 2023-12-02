@@ -20,8 +20,11 @@ public class TicTacToeEngine {
             GameLogic ticTacToe = new TicTacToeGame(player1Name, player2Name);
             
             ticTacToe.playGame();
+
         }
+
     }
+    
 }
 
 

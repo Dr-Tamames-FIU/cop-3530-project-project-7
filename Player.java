@@ -12,23 +12,28 @@ public class Player {
         this.name = name;
 
         this.symbol = symbol;
+        
     }
 
     // Gets the player's symbol
     public char getSymbol() {
 
         return symbol;
+
     }
 
     // Gets the player's name
     public String getName() {
 
         return name;
+
     }
 
     // Switches the player's symbol between 'X' and 'O'
     public void switchSymbol() {
         
         symbol = (symbol == 'X') ? 'O' : 'X';
+
     }
+
 }
