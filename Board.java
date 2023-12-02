@@ -63,11 +63,11 @@ public class Board {
         }
 
 
-        for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 3; y++) {
 
             ArrayList<Integer> column = new ArrayList<>();
 
-                for (int y = 0; y < 3; y++) {
+                for (int x = 0; x < 3; x++) {
 
                 column.add(x * 3 + y);
 
@@ -147,14 +147,14 @@ public class Board {
 
             char symbol = gameBoard[pos.get(0) / 3][pos.get(0) % 3];
          
-             if (symbol != ' ') {
+            if (symbol != ' ') {
 
                 boolean isMatch = pos.stream().allMatch(p -> gameBoard[p / 3][p % 3] == symbol);
-         
+
                     if (isMatch) {
 
-                        return true;
-
+                    return true;
+                    
                 }
 
             }
