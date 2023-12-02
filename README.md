@@ -8,7 +8,7 @@ Data Structures used are: 2d arrays, array-list and HashMap
 
 Contributions: 
 
-Alex Pepitone handled the coding for TicTacToeGame, TicTacToeEngine, PlayerMap, Player, Result and Board methods
+Alex Pepitone handled the coding for TicTacToeGame, TicTacToeEngine, PlayerMap, Player, and Board methods
 
 Alex Pepitone Detailed Contribution:
 
@@ -42,14 +42,6 @@ Alex Pepitone Detailed Contribution:
 
 -Designed the main class to run the Tic-Tac-Toe game.
 
--Implemented the main method to initialize player names, create a TicTacToeGame instance, and start the game.
-
--Established a class to represent the result of a Tic-Tac-Toe game.
-
--Implemented a constructor to initialize the result message.
-
--Created a method to display the game result.
-
 -Created a class to represent a player in the Tic-Tac-Toe game.
 
 -Implemented a constructor to initialize a player with a given name and symbol.
@@ -60,9 +52,9 @@ Alex Pepitone Detailed Contribution:
 
 -Implemented a constructor to initialize the player mapping.
 
--Added methods to insert a new player into the game and retrieve a player object based on the name.
 
-Gerald Gelats: Handled coding for GameLogic and GameInputHandler
+
+Gerald Gelats: Handled coding for GameLogic and GameInputHandler methods
 
 Gerald Gelats Detailed Contributions:
 
@@ -77,6 +69,18 @@ Gerald Gelats Detailed Contributions:
 -Added detailed README file.
 
 -Added simple and brief comments to code.
+
+Udeme Ekpo Handled the result method
+
+Udeme Ekpo Detailed Contributions:
+
+-Implemented a constructor to initialize the result message.
+
+-Created a method to display the game result.
+
+-Established a class to represent the result of a Tic-Tac-Toe game. 
+
+
 
 
 
