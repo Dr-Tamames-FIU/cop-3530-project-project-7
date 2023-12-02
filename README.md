@@ -42,6 +42,8 @@ Alex Pepitone Detailed Contribution:
 
 -Designed the main class to run the Tic-Tac-Toe game.
 
+-Implemented the main method to initialize player names, create a TicTacToeGame instance, and start the game.
+
 -Created a class to represent a player in the Tic-Tac-Toe game.
 
 -Implemented a constructor to initialize a player with a given name and symbol.
@@ -84,9 +86,7 @@ Udeme Ekpo Detailed Contributions:
 
 -Established a class to represent the result of a Tic-Tac-Toe game. 
 
-
-
-
+---------------------------------------------------------------------------------------
 
 
 Tic-Tac-Toe Game
